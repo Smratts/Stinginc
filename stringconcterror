@@ -1,4 +1,4 @@
-/* string copy */
+/* string concat */
 #include<stdio.h>
 #include<string.h>
 
