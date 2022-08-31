@@ -1,0 +1,48 @@
+// String len Tests
+#include <stdio.h>   //headerfile consists of printf and scanf functions
+void smr_strlen(char s1[5])      //called function
+{
+ int incri=0,count=0;         //intialization of i and c
+ while(s1[incri]!='\0')   //loop that iterates upto end of string that is null
+       {
+        count++;          //increment count 
+        incri++;          //increment incri
+               //printf("\nlength of string %s is :%d",s1,count);   //printing length of string
+
+       }
+      printf("\nlength of string %s is :%d",s1,count);   //printing length of string
+}
+void main()
+{
+  char s1[10];       //declaration of character array
+  printf("Enter the string:");   //printing message 
+  scanf("%[^\n]s",s1);           //reading string from user
+  printf("Entered string is:");  //printing message
+  printf("%s",s1);               //printing the enetered string
+  smr_strlen(s1);            //calling function
+}
+/*
+main.c:24:13: warning: format ‘%[^
+   ’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[100]’ [-Wformat=]
+   24 |   scanf("%[^\n]s",&s1);           //reading string from user
+      |          ~~~^~    ~~~
+      |             |     |
+      |             |     char (*)[100]
+      |             char *
+Enter the string:abcd edfg
+Entered string is:abcd edfg
+length of string abcd edfg is :9*/
+
+/* char s1[1];       //declaration of character array
+void sailaja_strlen(char s1[5])      //called function
+when we give more than declared size of a string:
+main.c:24:13: warning: format ‘%[^
+   ’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[100]’ [-Wformat=]
+   24 |   scanf("%[^\n]s",&s1);           //reading string from user
+      |          ~~~^~    ~~~
+      |             |     |
+      |             |     char (*)[100]
+      |             char *
+Enter the string:abcd edfg
+Entered string is:abcd edfg
+length of string abcd edfg is :9*/
