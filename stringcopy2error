@@ -1,0 +1,28 @@
+/* string copy */
+#include<stdio.h>
+#include<string.h>
+
+int main() {
+    
+   //char s1[40]={'m','a','h','e','n','d','e','r'},s2[40]={'r','e','d','d','y'};
+   char s1[40],s2[40];
+   int i,j;
+   printf("enter first string:");
+   scanf("%[^\n]s",s1);
+   printf("enter second string:");
+   scanf("%[^\n]s",s2);
+   for(i=0;s1[i]!='\0';i++)
+   {
+       
+   }
+       for(j=0;s2[j]!='\0';j++,i++){
+       s1[i]=s2[j];
+       }
+   s1[i]='\0';
+   printf(" after concatenation :%s",s1);
+}
+
+//after concatenation :mahenderreddy
+
+// enter first string:abc
+//enter second string: after concatenation :abc�d8�
